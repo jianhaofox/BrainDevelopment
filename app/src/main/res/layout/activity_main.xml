@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#fff">
+
+        <!--引入头部-->
     <com.jzy.braindevelopment.comment.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

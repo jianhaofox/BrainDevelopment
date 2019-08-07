@@ -8,6 +8,9 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.comment.TitleLayout;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -16,11 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //隐藏系统标题栏
-        ActionBar actionBar = getSupportActionBar();
-        if(actionBar!=null){
-            actionBar.hide();
-        }
+        InitActivity.initTitle(MainActivity.this,"主页");
     }
 
 }

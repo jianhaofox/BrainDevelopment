@@ -95,13 +95,13 @@
             android:orientation="horizontal"
             android:layout_marginLeft="160dp"
             android:layout_marginTop="30dip">
+
             <Button
                 android:id="@+id/logoboot"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/logbutton"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

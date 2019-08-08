@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.nfc.Tag;
 import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -20,6 +21,7 @@ import com.jzy.braindevelopment.Test;
 
 //自定义标题栏控件
 public  class TitleLayout extends ConstraintLayout {
+    public static final  String TAG = "Debug";
     public TitleLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -45,17 +47,17 @@ public  class TitleLayout extends ConstraintLayout {
         titleBack.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Log.d("Key", event.getAction()+"");
+                Log.d(TAG, event.getAction()+"");
 
                 if(event.getAction()==KeyEvent.ACTION_DOWN) {
-                    Log.d("Key", "ACTION_DOWN: ");
-                    titleBack.setBackgroundColor(Color.parseColor("#4A8DFE"));
+                    Log.d(TAG, "ACTION_DOWN: ");
+                    getRootView().setBackgroundColor(Color.parseColor("#4A8DFE"));
                     String activityName = getContext().toString();
                     ((Activity)getContext()).finish();
-                    Log.d("status", activityName);
+                    Log.d(TAG, activityName);
                 }
                 if(event.getAction()==KeyEvent.ACTION_UP){
-                    Log.d("Key", "ACTION_UP: ");
+                    Log.d(TAG, "ACTION_UP: ");
                     titleBack.setBackgroundColor(Color.parseColor("#4399FE"));
                 }
                 return false;

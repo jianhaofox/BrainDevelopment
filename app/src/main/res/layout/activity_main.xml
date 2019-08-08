@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:text="训练 - 记忆力"
             android:textColor="#253"
-            android:textSize="20sp"
+            android:textSize="17dp"
             android:layout_marginLeft="5dp"/>
 
     </LinearLayout>
@@ -56,6 +56,7 @@
         app:layout_constraintTop_toBottomOf="@id/column_memory_title">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/poker_layout"
             android:layout_width="60dp"
             android:layout_height="wrap_content">
             <ImageView
@@ -74,8 +75,6 @@
                 android:textSize="18dp"/>
         </android.support.constraint.ConstraintLayout>
 
-
     </android.support.constraint.ConstraintLayout>
-
 
 </android.support.constraint.ConstraintLayout>

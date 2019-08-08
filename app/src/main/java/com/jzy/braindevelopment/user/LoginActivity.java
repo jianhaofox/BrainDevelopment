@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 //        验证登录信息，避免恶意攻击
-        final Button logo = findViewById(R.id.logo_boot);
+        final Button logo = findViewById(R.id.logoboot);
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,27 +32,25 @@ public class LoginActivity extends AppCompatActivity {
                 String Pwd;
             }
         });
-        logo.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.d("Key", event.getAction() + "父");
+        logo.setClickable(true);
+        logo.setOnTouchListener(new TouchAnimation());
+    }
+}
+class TouchAnimation implements View.OnTouchListener{
+    public static final  String TAG = "Debug";
+    @Override
+    public boolean onTouch(View view, MotionEvent event) {
+        Log.d(TAG, event.getAction()+"");
+        if(event.getAction()== KeyEvent.ACTION_DOWN) {
+            Log.d(TAG, "ACTION_DOWN: ");
+            view.setBackgroundResource(R.mipmap.botton_logoer);
 
-                if (event.getAction() == KeyEvent.ACTION_DOWN) {
-//                    Drawable  background=botton_logoer;
-//                       logo.setBackground();
-
-
-
-//                  @mipmap-xhdpi/botton_logoer);
-
-                    if (event.getAction() == KeyEvent.ACTION_UP) {
-                        Log.d("Key", "失去123: ");
-
-                    }
-                }
-                return false;
-            }
-        });
+        }
+        if(event.getAction()==KeyEvent.ACTION_UP){
+            Log.d(TAG, "ACTION_UP: ");
+            view.setBackgroundResource(R.mipmap.button_logo);
+        }
+        return false;
     }
 }
 

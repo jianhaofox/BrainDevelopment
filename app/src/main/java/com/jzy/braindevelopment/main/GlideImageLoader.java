@@ -2,7 +2,6 @@ package com.jzy.braindevelopment.main;
 
 import android.content.Context;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.youth.banner.loader.ImageLoader;
 

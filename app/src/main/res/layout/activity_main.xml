@@ -2,17 +2,80 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#fff">
 
-        <!--引入头部-->
+    <!--引入头部-->
     <com.jzy.braindevelopment.comment.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/title_bar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--轮播-->
+    <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintTop_toBottomOf="@id/title_bar"
+        android:background="#999"/>
+
+    <!--训练类别栏目的标题部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_banner"
+        android:padding="3dp"
+        android:id="@+id/column_memory_title">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/triangle"
+       />
+        <TextView
+            android:id="@+id/bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="训练 - 记忆力"
+            android:textColor="#253"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+    <!--训练类别的内容栏目-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="20dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/column_memory_title">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/poker_icon"
+                android:layout_width="56dp"
+                android:layout_height="46dp"
+                android:src="@mipmap/poker" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/poker_txt"
+                android:text="扑克牌"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/poker_icon"
+                android:textSize="18dp"/>
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>

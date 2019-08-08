@@ -5,29 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="40dp"
-    android:background="#4E8CA7">
+    android:background="#4399FE">
 
     <ImageButton
         android:id="@+id/bar_back"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:src="@drawable/back"
+        android:src="@mipmap/back"
         android:theme="@style/RedButtonStyle"
         android:background="#0000"
-        android:layout_margin="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
-
-
 
     <TextView
         android:id="@+id/bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="标题"
-        app:layout_constraintHeight_percent="0.9"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +30,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/bar_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +40,18 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:background="@mipmap/headpic"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitStart"
+        android:id="@+id/head_pic"
+        android:textColor="#fff"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

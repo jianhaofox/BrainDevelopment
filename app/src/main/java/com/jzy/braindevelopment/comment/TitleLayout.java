@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jzy.braindevelopment.R;
@@ -25,8 +26,8 @@ public  class TitleLayout extends ConstraintLayout {
         //LayoutInflater可以实现布局动态加载，参数1布局文件ID，参数2可以给加载好的布局添加一个父布局,不需要可以填null
         LayoutInflater.from(context).inflate(R.layout.title_layout,this);
         final ImageButton titleBack = (ImageButton) findViewById(R.id.bar_back);
-        TextView barMore = (TextView)findViewById((R.id.bar_more));
-        barMore.setOnClickListener(new OnClickListener() {
+        ImageView headPic = (ImageView) findViewById((R.id.head_pic));
+        headPic.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), Test.class);
@@ -48,14 +49,14 @@ public  class TitleLayout extends ConstraintLayout {
 
                 if(event.getAction()==KeyEvent.ACTION_DOWN) {
                     Log.d("Key", "ACTION_DOWN: ");
-                    titleBack.setBackgroundColor(Color.parseColor("#2480A7"));
+                    titleBack.setBackgroundColor(Color.parseColor("#4A8DFE"));
                     String activityName = getContext().toString();
                     ((Activity)getContext()).finish();
                     Log.d("status", activityName);
                 }
                 if(event.getAction()==KeyEvent.ACTION_UP){
                     Log.d("Key", "ACTION_UP: ");
-                    titleBack.setBackgroundColor(Color.parseColor("#4E8CA7"));
+                    titleBack.setBackgroundColor(Color.parseColor("#4399FE"));
                 }
                 return false;
             }

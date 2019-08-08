@@ -23,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="180dip"
             android:orientation="horizontal">
-            <!--android:background="@drawable/logos"-->
         </LinearLayout>
 
         <!--账号-->
@@ -44,7 +43,7 @@
                 android:layout_marginLeft="20dip"/>
 
             <EditText
-                android:id="@+id/usemame"
+                android:id="@+id/user_text"
                 android:layout_width="200dip"
                 android:layout_height="30dip"
                 android:layout_gravity="center_vertical"
@@ -74,7 +73,7 @@
                 android:layout_marginLeft="20dip"/>
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/password_text"
                 android:layout_width="200dip"
                 android:layout_height="30dip"
                 android:layout_gravity="center_vertical"
@@ -95,13 +94,15 @@
             android:orientation="horizontal"
             android:layout_marginLeft="160dp"
             android:layout_marginTop="30dip">
+
             <Button
-                android:id="@+id/logoboot"
+                android:id="@+id/logo_boot"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/logbutton"
                 android:textSize="20dp"
-                />
+                android:background="@drawable/mylist_view"/>
+                <!--android:background="@mipmap/button_logo"-->
+
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

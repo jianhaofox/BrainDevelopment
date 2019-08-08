@@ -49,11 +49,11 @@
                 android:layout_height="30dip"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dip"
-                android:background="@null"
+                android:background="#00ADEE"
                 android:maxLength="11"
                 android:textColor="#FFFFFF"
                 android:inputType="number"
-                android:hint="Usemame"
+                android:hint="Usemame/手机号码"
                 />
 
         </LinearLayout>
@@ -78,8 +78,8 @@
                 android:layout_width="200dip"
                 android:layout_height="30dip"
                 android:layout_gravity="center_vertical"
-                android:background="@null"
-                android:hint="Password"
+                android:background="#00ADEE"
+                android:hint="Password/密码"
                 android:inputType="textPassword"
                 android:maxLength="18"
                 android:singleLine="true"

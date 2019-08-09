@@ -16,7 +16,7 @@ import com.jzy.braindevelopment.game.GameInitiator;
 
 //难度选择活动
 public class GradeActivity extends AppCompatActivity {
-    public static final  String TAG = "Debug";
+    public static final String TAG = "Debug";
     //游戏启动器
     private GameInitiator gameInitiator;
     //游戏名字
@@ -26,29 +26,29 @@ public class GradeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
-        InitActivity.initTitle(this,"选择级别");
+        InitActivity.initTitle(this, "选择级别");
         //获得游戏
         Bundle bundle = getIntent().getExtras();
         gameName = bundle.getString("gameName");
         Log.d(TAG, gameName);
 
         //绑定游戏难度按钮点击事件
-        ViewGroup viewGroup = ((ViewGroup)findViewById(R.id.grade_layout));
+        ViewGroup viewGroup = ((ViewGroup) findViewById(R.id.grade_layout));
 
         int count = viewGroup.getChildCount();
         View view = null;
-        for (int i = 0; i  < count;i++){
-            view =viewGroup.getChildAt(i);
-
-            if(view instanceof Button){ //如果是按钮 绑定点击事件
+        for (int i = 0; i < count; i++) {
+            view = viewGroup.getChildAt(i);
+            //如果是按钮 绑定点击事件
+            if (view instanceof Button) {
                 view.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View view) {
-                        int grade =Integer.parseInt(view.getTag().toString());
-                        gameInitiator = new GameInitiator(gameName,grade,GradeActivity.this);
-                        Log.d(TAG, "GradeClicked Game-Grade is "+ gameInitiator.getGameGrade());
-                        Log.d(TAG, "GradeClicked Game-Name is "+ gameInitiator.getGameName());
+                        int grade = Integer.parseInt(view.getTag().toString());
+                        gameInitiator = new GameInitiator(gameName, grade, GradeActivity.this);
+                        Log.d(TAG, "GradeClicked Game-Grade is " + gameInitiator.getGameGrade());
+                        Log.d(TAG, "GradeClicked Game-Name is " + gameInitiator.getGameName());
                         //游戏启动
                         gameInitiator.startGame();
                         /*Intent intent = new Intent(GradeActivity.this,PokerGameActivity.class);

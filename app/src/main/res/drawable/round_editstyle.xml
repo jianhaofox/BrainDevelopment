@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 设置圆角边框 -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="10dp"
-    android:shape="rectangle" >
-    <solid android:color="#00AEEF" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <corners
         android:bottomLeftRadius="30dp"
         android:bottomRightRadius="30dp"
         android:topLeftRadius="30dp"
         android:topRightRadius="30dp" />
-</shape>
+    <!--按压-->
+    <item android:state_pressed="true">
+        <shape>
+            <gradient
+                android:angle="180"
+                android:endColor="#1CD27A"
+                android:startColor="#2A422F" /> <!--主体渐变-->
+            <stroke
+                android:width="2dip"
+                android:color="#FFFFFF" /><!--边框-->
+            <corners android:radius="30dp" /> <!--圆角-->
+            <padding
+                android:left="5dp"
+                />
+        </shape>
+    </item>
+
+    <item>
+        <shape> 
+            <gradient
+                android:angle="180"
+                android:endColor="#006179"
+                android:startColor="#00556E" />
+             <stroke
+                android:width="2dp"
+                android:color="#005A73" /> <!--边框-->
+             <corners android:radius="30dp" /> 
+            <padding
+                android:left="5dp"
+                 />
+        </shape>
+    </item>
+</selector>

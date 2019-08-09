@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".user.LoginActivity">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@drawable/logo"
         android:orientation="vertical">
 
@@ -22,27 +23,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="180dip"
-            android:orientation="horizontal">
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
 
         <!--账号-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dip"
-            android:orientation="horizontal"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="70dip"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="70dip">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dip"
                 android:text="账号"
                 android:textColor="#FFFFFF"
-                android:textSize="23dip"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dip"/>
+                android:textSize="23dip" />
 
             <EditText
                 android:id="@+id/user"
@@ -50,13 +50,12 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dip"
-                android:maxLength="11"
-                android:textColor="#FFFFFF"
-                android:inputType="number"
-                android:hint="  Usemame"
                 android:background="@drawable/round_editstyle"
-                />
-                />
+                android:hint="  Usemame"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="#FFFFFF" />
+            />
         </LinearLayout>
 
         <!--密码-->
@@ -65,44 +64,43 @@
             android:layout_height="50dip"
             android:layout_marginLeft="42dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dip"
                 android:text="密码"
                 android:textColor="#FFFFFF"
-                android:textSize="23dip"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dip"/>
+                android:textSize="23dip" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dip"
                 android:background="@drawable/round_editstyle"
                 android:hint="  Password"
                 android:inputType="textPassword"
                 android:maxLength="18"
                 android:singleLine="true"
-                android:textColor="#FFFFFF"
-                android:layout_marginLeft="20dip"
-                />
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
-        <!--登陆按钮-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dip"
-            android:orientation="horizontal"
             android:layout_marginLeft="160dp"
-            android:layout_marginTop="30dip">
+            android:layout_marginTop="30dip"
+            android:orientation="horizontal">
+            <!--登陆按钮-->
             <Button
                 android:id="@+id/logoboot"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@mipmap/botton_logoer"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

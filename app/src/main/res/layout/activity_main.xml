@@ -44,7 +44,6 @@
             android:text="训练 - 记忆力"
             android:textColor="#fff"
             android:textSize="15dp"
-
             android:layout_marginLeft="5dp"/>
 
     </LinearLayout>

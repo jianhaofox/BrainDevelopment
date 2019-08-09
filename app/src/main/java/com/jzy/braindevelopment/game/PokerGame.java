@@ -19,6 +19,4 @@ public class PokerGame {
     public void setEachShowCardNum(Integer eachShowCardNum) {
         this.eachShowCardNum = eachShowCardNum;
     }
-
-
 }

@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.jzy.braindevelopment.R;
+import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.game.PokerGame;
 
 public class PokerGameActivity extends AppCompatActivity {
     //进入记忆扑克游戏活动
@@ -11,8 +13,11 @@ public class PokerGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poker_game);
-        //得到游戏难度 - 设置要记的总副数 - 设置每次记忆的牌数 一副牌52张(去掉大小王)
+        InitActivity.initTitle(this,"扑克记忆");
+        //创建游戏
+        PokerGame pokerGame = new PokerGame();
 
+        //随机
 
     }
 }

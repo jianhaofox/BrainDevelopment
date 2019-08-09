@@ -11,6 +11,8 @@
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".user.LoginActivity"></activity>
         <activity android:name=".Test" />
+        <activity android:name=".game.activity.PokerGameActivity"/>
+        <activity android:name=".game.activity.GradeActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

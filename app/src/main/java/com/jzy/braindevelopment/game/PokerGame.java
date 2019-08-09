@@ -20,9 +20,5 @@ public class PokerGame {
         this.eachShowCardNum = eachShowCardNum;
     }
 
-    public String getName() {
-        return "poker";
-    }
-
 
 }

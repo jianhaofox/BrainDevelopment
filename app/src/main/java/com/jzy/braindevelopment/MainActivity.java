@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
+import android.support.constraint.solver.widgets.ConstraintTableLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -39,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         banner.start();
         //====== 触摸动画和事件 =======
         ConstraintLayout constraintLayout = (ConstraintLayout)findViewById(R.id.poker_layout);
-
         constraintLayout.setClickable(true);
         constraintLayout.setOnTouchListener(new TouchAnimation());
     }

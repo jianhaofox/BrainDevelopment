@@ -1,5 +1,7 @@
 package com.jzy.braindevelopment.game.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +18,7 @@ import com.jzy.braindevelopment.game.GameInitiator;
 public class GradeActivity extends AppCompatActivity {
     public static final  String TAG = "Debug";
     //游戏启动器
-    private GameInitiator gameInitiator = new GameInitiator();
+    private GameInitiator gameInitiator;
     //游戏名字
     private String gameName;
 
@@ -44,12 +46,13 @@ public class GradeActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         int grade =Integer.parseInt(view.getTag().toString());
-                        gameInitiator.setGameName(gameName);
-                        gameInitiator.setGameGrade(grade);
+                        gameInitiator = new GameInitiator(gameName,grade,GradeActivity.this);
                         Log.d(TAG, "GradeClicked Game-Grade is "+ gameInitiator.getGameGrade());
                         Log.d(TAG, "GradeClicked Game-Name is "+ gameInitiator.getGameName());
                         //游戏启动
                         gameInitiator.startGame();
+                        /*Intent intent = new Intent(GradeActivity.this,PokerGameActivity.class);
+                        startActivity(intent);*/
                     }
 
                 });

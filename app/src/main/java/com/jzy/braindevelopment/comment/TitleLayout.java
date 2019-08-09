@@ -24,8 +24,7 @@ public  class TitleLayout extends ConstraintLayout {
     public static final  String TAG = "Debug";
     public TitleLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        //LayoutInflater可以实现布局动态加载，参数1布局文件ID，参数2可以给加载好的布局添加一个父布局,不需要可以填null
+  //LayoutInflater可以实现布局动态加载，参数1布局文件ID，参数2可以给加载好的布局添加一个父布局,不需要可以填null
         LayoutInflater.from(context).inflate(R.layout.title_layout,this);
         final ImageButton titleBack = (ImageButton) findViewById(R.id.bar_back);
         ImageView headPic = (ImageView) findViewById((R.id.head_pic));

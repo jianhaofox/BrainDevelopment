@@ -23,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="180dip"
             android:orientation="horizontal">
-            <!--android:background="@drawable/logos"-->
         </LinearLayout>
 
         <!--账号-->
@@ -31,31 +30,33 @@
             android:layout_width="match_parent"
             android:layout_height="50dip"
             android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="70dip">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="账号:"
+                android:text="账号"
                 android:textColor="#FFFFFF"
                 android:textSize="23dip"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dip"/>
 
             <EditText
-                android:id="@+id/usemame"
-                android:layout_width="200dip"
-                android:layout_height="30dip"
+                android:id="@+id/user"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dip"
-                android:background="@null"
                 android:maxLength="11"
                 android:textColor="#FFFFFF"
                 android:inputType="number"
-                android:hint="Usemame"
+                android:hint="  Usemame"
+                android:background="@drawable/round_editstyle"
                 />
-
+                />
         </LinearLayout>
 
         <!--密码-->
@@ -67,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密码:"
+                android:text="密码"
                 android:textColor="#FFFFFF"
                 android:textSize="23dip"
                 android:layout_gravity="center_vertical"
@@ -75,11 +76,11 @@
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="200dip"
-                android:layout_height="30dip"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
-                android:background="@null"
-                android:hint="Password"
+                android:background="@drawable/round_editstyle"
+                android:hint="  Password"
                 android:inputType="textPassword"
                 android:maxLength="18"
                 android:singleLine="true"

@@ -1,32 +1,22 @@
 package com.jzy.braindevelopment;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.game.activity.GradeActivity;
 import com.jzy.braindevelopment.main.GlideImageLoader;
 import com.youth.banner.Banner;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-
-import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         banner.start();
         //====== 触摸动画和事件 =======
         ConstraintLayout constraintLayout = (ConstraintLayout)findViewById(R.id.poker_layout);
+
         constraintLayout.setClickable(true);
         constraintLayout.setOnTouchListener(new TouchAnimation());
     }
@@ -80,19 +71,25 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onTouch(View view, MotionEvent event) {
+            String gameName;
             Log.d(TAG, event.getAction()+"");
             if(event.getAction()== KeyEvent.ACTION_DOWN) {
                 Log.d(TAG, "ACTION_DOWN: ");
                 view.setBackgroundColor(Color.parseColor("#A69AA0"));
-                String activityName = view.getContext().toString();
-                /*((Activity)view.getContext()).finish();*/
-                Log.d(TAG, activityName);
+
             }
             if(event.getAction()==KeyEvent.ACTION_UP){
                 Log.d(TAG, "ACTION_UP: ");
                 view.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                //启动 难度选择Activity
+                Intent intent = new Intent(MainActivity.this, GradeActivity.class);
+                //传递参数 - 游戏名字
+                gameName = view.getTag().toString();
+                intent.putExtra("gameName",gameName);
+                Log.d(TAG, view.getTag().toString());
+                startActivity(intent);
             }
             return false;
         }
-        }
     }
+}

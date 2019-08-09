@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game.activity.GradeActivity">
+    <!--引入头部-->
+    <com.jzy.braindevelopment.comment.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grade_layout"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+        <Button
+            android:id="@+id/primary_btn"
+            android:layout_width="267dp"
+            android:layout_height="0dp"
+            android:text="初级"
+            android:textColor="#fff"
+            android:background="@drawable/my_style"
+            android:layout_marginTop="150dp"
+            android:tag="1"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/middle_rank_button"
+            android:layout_width="267dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.1"
+            android:textColor="#fff"
+            android:text="中级"
+            android:background="@drawable/my_style"
+            android:layout_marginTop="50dp"
+            android:tag="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/primary_btn"/>
+
+        <Button
+            android:id="@+id/expert_button"
+            android:layout_width="267dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.1"
+            android:textColor="#fff"
+            android:text="高级"
+            android:background="@drawable/my_style"
+            android:layout_marginTop="50dp"
+            android:tag="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/middle_rank_button"/>
+
+        <Button
+            android:id="@+id/superfine_button"
+            android:layout_width="267dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.1"
+            android:textColor="#fff"
+            android:text="特级"
+            android:background="@drawable/my_style"
+            android:layout_marginTop="50dp"
+            android:tag="4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/expert_button"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

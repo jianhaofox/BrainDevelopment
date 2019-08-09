@@ -11,6 +11,6 @@
         <item name="colorButtonNormal">@android:color/holo_red_light</item>
     </style>
 
-    <!--<style name="RedButtonStyle"></style>-->
+
 
 </resources>

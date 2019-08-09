@@ -50,14 +50,14 @@ public  class TitleLayout extends ConstraintLayout {
 
                 if(event.getAction()==KeyEvent.ACTION_DOWN) {
                     Log.d(TAG, "ACTION_DOWN: ");
-                    getRootView().setBackgroundColor(Color.parseColor("#4A8DFE"));
+                    v.setBackgroundColor(Color.parseColor("#4A8DFE"));
                     String activityName = getContext().toString();
                     ((Activity)getContext()).finish();
                     Log.d(TAG, activityName);
                 }
                 if(event.getAction()==KeyEvent.ACTION_UP){
                     Log.d(TAG, "ACTION_UP: ");
-                    titleBack.setBackgroundColor(Color.parseColor("#4399FE"));
+                    v.setBackgroundColor(Color.parseColor("#4399FE"));
                 }
                 return false;
             }

@@ -76,4 +76,3 @@ class TouchAnimation implements View.OnTouchListener {
         return false;
     }
 }
-

@@ -57,6 +57,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/poker_layout"
+            android:tag="poker"
             android:layout_width="60dp"
             android:layout_height="wrap_content">
             <ImageView

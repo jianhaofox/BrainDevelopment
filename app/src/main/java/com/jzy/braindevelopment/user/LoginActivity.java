@@ -25,6 +25,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "Debug";
 
+    //            手机号码格式
+    final String num = "[1][345678]\\d{9}";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 //        改变头部标题名字
         InitActivity.initTitle(this, "登录");
 //        改变头部图片为注册
-        ImageView title_img=(this.findViewById(R.id.head_pic));
+        ImageView title_img = (this.findViewById(R.id.head_pic));
         title_img.setBackgroundResource(R.mipmap.sign);
 
         final Button logo = findViewById(R.id.logoboot);
@@ -45,21 +48,29 @@ public class LoginActivity extends AppCompatActivity {
                 /* 获得用户输入的账号，密码验证防止恶意登录*/
                 EditText editText1 = findViewById(R.id.user);
                 String user = String.valueOf(editText1.getText().toString());
+
                 EditText editText2 = (EditText) findViewById(R.id.password);
                 String Pwd = String.valueOf(editText2.getText().toString());
-                if (user.length() <= 0)
-                {
-                    Log.d(TAG, "!=null" + user);
-                    Toast.makeText(LoginActivity.this, "请输入账号", Toast.LENGTH_SHORT).show();
-                } else if (user.length()!=11)
-                {
-                    Toast.makeText(LoginActivity.this, "请输入11位手机账号", Toast.LENGTH_SHORT).show();
-                }else if (Pwd.length() <= 0)
-                {
-                    Toast.makeText(LoginActivity.this, "请输入密码", Toast.LENGTH_SHORT).show();
+//                登陆信息验证
+                if (UserExa(user, Pwd)) {
+                    Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    private boolean UserExa(String user, String pwd) {
+
+        boolean userExa = true;
+
+        if (user.length() <= 0 || user.matches(num) != true) {
+            Toast.makeText(LoginActivity.this, "请输入正确的11位手机账号", Toast.LENGTH_SHORT).show();
+            userExa = false;
+        } else if (pwd.length() <= 0 || pwd.length() < 6) {
+            Toast.makeText(LoginActivity.this, "请输入正确的密码", Toast.LENGTH_SHORT).show();
+            userExa = false;
+        }
+        return userExa;
     }
 }
 

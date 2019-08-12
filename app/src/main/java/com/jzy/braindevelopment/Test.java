@@ -16,6 +16,7 @@ public class Test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+//        引用头部标题
         setContentView(R.layout.activity_test);
         InitActivity.initTitle(Test.this,"测试");
 //        登录
@@ -27,7 +28,7 @@ public class Test extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //        登录
+        //        注册
         Button btn_sign = (Button)findViewById(R.id.sign_user);
         btn_sign.setOnClickListener(new View.OnClickListener() {
             @Override

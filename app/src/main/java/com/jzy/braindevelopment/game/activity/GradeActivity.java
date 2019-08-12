@@ -33,7 +33,7 @@ public class GradeActivity extends AppCompatActivity {
         Log.d(TAG, gameName);
 
         //绑定游戏难度按钮点击事件
-        ViewGroup viewGroup = ((ViewGroup)findViewById(R.id.grade_layout));
+        ViewGroup viewGroup = findViewById(R.id.grade_layout);
 
         int count = viewGroup.getChildCount();
         View view = null;
@@ -49,10 +49,9 @@ public class GradeActivity extends AppCompatActivity {
                         gameInitiator = new GameInitiator(gameName,grade,GradeActivity.this);
                         Log.d(TAG, "GradeClicked Game-Grade is "+ gameInitiator.getGameGrade());
                         Log.d(TAG, "GradeClicked Game-Name is "+ gameInitiator.getGameName());
+
                         //游戏启动
                         gameInitiator.startGame();
-                        /*Intent intent = new Intent(GradeActivity.this,PokerGameActivity.class);
-                        startActivity(intent);*/
                     }
 
                 });

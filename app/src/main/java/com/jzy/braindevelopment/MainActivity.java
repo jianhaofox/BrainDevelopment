@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         InitActivity.initTitle(this,"主页");
         //======= 轮播配置 =========
-        Banner banner = (Banner)findViewById(R.id.main_banner);
+        Banner banner = findViewById(R.id.main_banner);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
         List <Integer> imageUrls = new ArrayList<>();
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         banner.setImages(imageUrls);
         banner.start();
         //====== 触摸动画和事件 =======
-        ConstraintLayout constraintLayout = (ConstraintLayout)findViewById(R.id.poker_layout);
+        ConstraintLayout constraintLayout = findViewById(R.id.poker_layout);
         constraintLayout.setClickable(true);
         constraintLayout.setOnTouchListener(new TouchAnimation());
     }

@@ -1,19 +1,22 @@
 package com.jzy.braindevelopment.game;
 
-public class PokerGame {
-    private Integer cardSum;    //总副数
+import java.io.Serializable;
+
+public class PokerGame implements Serializable {
     private Integer eachShowCardNum;       //每次显示的张数
+    private Integer second;     //牌显示的秒数
 
-    public Integer getCardSum() {
-        return cardSum;
-    }
-
-    public void setCardSum(Integer cardSum) {
-        this.cardSum = cardSum;
-    }
 
     public Integer getEachShowCardNum() {
         return eachShowCardNum;
+    }
+
+    public Integer getSecond() {
+        return second;
+    }
+
+    public void setSecond(Integer second) {
+        this.second = second;
     }
 
     public void setEachShowCardNum(Integer eachShowCardNum) {

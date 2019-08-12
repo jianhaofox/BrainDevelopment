@@ -2,7 +2,6 @@ package com.jzy.braindevelopment.user;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +11,7 @@ import android.widget.Toast;
 import com.jzy.braindevelopment.R;
 import com.jzy.braindevelopment.comment.InitActivity;
 
-public class signActiviy extends AppCompatActivity {
+public class SignActivity extends AppCompatActivity {
 
     public static final String TAG = "Debug";
 
@@ -65,10 +64,10 @@ public class signActiviy extends AppCompatActivity {
                       if (Phoneboole){
                           if ( Verification() )
                           {
-                              Toast.makeText(signActiviy.this, "注册成功", Toast.LENGTH_SHORT).show();
+                              Toast.makeText(SignActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                           }
                       }else{
-                          Toast.makeText(signActiviy.this, "请输入手机号", Toast.LENGTH_SHORT).show();
+                          Toast.makeText(SignActivity.this, "请输入手机号", Toast.LENGTH_SHORT).show();
                       }
                   }
                 }
@@ -85,14 +84,14 @@ public class signActiviy extends AppCompatActivity {
 
         if (phone.length() <= 0) {
             result = false;
-            Toast.makeText(signActiviy.this, "手机号码不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "手机号码不能为空", Toast.LENGTH_SHORT).show();
         } else if (phone.matches(num) != true) {
             result = false;
-            Toast.makeText(signActiviy.this, "请输入正确的11位手机账号", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "请输入正确的11位手机账号", Toast.LENGTH_SHORT).show();
         } else {
             Security = "8520";
             result=true;
-            Toast.makeText(signActiviy.this, "验证码已发送到" + phone + "注意查收", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "验证码已发送到" + phone + "注意查收", Toast.LENGTH_SHORT).show();
         }
         return result;
     }
@@ -107,7 +106,7 @@ public class signActiviy extends AppCompatActivity {
 
         if (!Security.equals(verify)) {
             VerificationResult = false;
-            Toast.makeText(signActiviy.this, "请输入正确的验证码", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "请输入正确的验证码", Toast.LENGTH_SHORT).show();
         }
         return VerificationResult;
     }
@@ -122,7 +121,7 @@ public class signActiviy extends AppCompatActivity {
             NameResult = true;
         } else {
             NameResult = false;
-            Toast.makeText(signActiviy.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
         }
         return NameResult;
     }
@@ -139,13 +138,13 @@ public class signActiviy extends AppCompatActivity {
 
         if (pwd.length() <= 0 || pwdS.length() <= 0) {
             PwdResult = false;
-            Toast.makeText(signActiviy.this, "密码不能为空" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "密码不能为空" , Toast.LENGTH_SHORT).show();
         } else if (pwd.length() < 6 || pwdS.length() < 6) {
             PwdResult = false;
-            Toast.makeText(signActiviy.this, "请输入6位数以上的密码" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "请输入6位数以上的密码" , Toast.LENGTH_SHORT).show();
         } else if (!pwd.equals(pwdS)) {
             PwdResult = false;
-            Toast.makeText(signActiviy.this, "两次密码不一致，请重新输入" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignActivity.this, "两次密码不一致，请重新输入" , Toast.LENGTH_SHORT).show();
         }
         return PwdResult;
     }

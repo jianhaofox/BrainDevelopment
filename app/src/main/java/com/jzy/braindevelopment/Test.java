@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.jzy.braindevelopment.comment.InitActivity;
 import com.jzy.braindevelopment.user.LoginActivity;
+import com.jzy.braindevelopment.user.SignActivity;
 
 public class Test extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class Test extends AppCompatActivity {
         btn_sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Test.this, signActiviy.class);
+                Intent intent = new Intent(Test.this, SignActivity.class);
                 startActivity(intent);
             }
         });

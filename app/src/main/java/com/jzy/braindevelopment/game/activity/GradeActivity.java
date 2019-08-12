@@ -45,11 +45,10 @@ public class GradeActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View view) {
-                        int grade =Integer.parseInt(view.getTag().toString());
-                        gameInitiator = new GameInitiator(gameName,grade,GradeActivity.this);
-                        Log.d(TAG, "GradeClicked Game-Grade is "+ gameInitiator.getGameGrade());
-                        Log.d(TAG, "GradeClicked Game-Name is "+ gameInitiator.getGameName());
-
+                        int grade = Integer.parseInt(view.getTag().toString());
+                        gameInitiator = new GameInitiator(gameName, grade, GradeActivity.this);
+                        Log.d(TAG, "GradeClicked Game-Grade is " + gameInitiator.getGameGrade());
+                        Log.d(TAG, "GradeClicked Game-Name is " + gameInitiator.getGameName());
                         //游戏启动
                         gameInitiator.startGame();
                     }

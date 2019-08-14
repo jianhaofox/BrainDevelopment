@@ -19,6 +19,8 @@ public class GradeActivity extends AppCompatActivity {
     //游戏名字
     private String gameName;
 
+    int i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

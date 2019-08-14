@@ -24,11 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PokerGameActivity extends AppCompatActivity {
-    public static final  String TAG = "Debug";
+    public static final String TAG = "Debug";
     private ConstraintLayout gameViewLayout;
-    private int x=0;
+    private int x = 0;
     private PokerGame pokerGame;
-    private Integer phoneType=1;
+    private Integer phoneType = 1;
     private Integer gameGrade;
 
     //进入记忆扑克游戏活动
@@ -36,22 +36,21 @@ public class PokerGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poker_game);
-        InitActivity.initTitle(this,"扑克记忆");
+        InitActivity.initTitle(this, "扑克记忆");
 
-        pokerGame = (PokerGame)getIntent().getSerializableExtra("initData");
-        gameGrade=Integer.valueOf(getIntent().getStringExtra("gameGrade"));
-        phoneType =Integer.valueOf(getIntent().getStringExtra("phoneType"));
+        pokerGame = (PokerGame) getIntent().getSerializableExtra("initData");
+        gameGrade = Integer.valueOf(getIntent().getStringExtra("gameGrade"));
+        phoneType = Integer.valueOf(getIntent().getStringExtra("phoneType"));
 
-        Log.d(TAG, "pokerGameObject"+pokerGame.getSecond()+""+pokerGame.getEachShowCardNum());
-        Log.d(TAG, "手机类型"+phoneType);
-
+        Log.d(TAG, "pokerGameObject" + pokerGame.getSecond() + "" + pokerGame.getEachShowCardNum());
+        Log.d(TAG, "手机类型" + phoneType);
 
 
         //创建游戏
 
         //随机换牌
-        final Integer [] pokerGroup = new Integer[]{
-                R.drawable.poker3,R.drawable.poker4, R.drawable.poker5, R.drawable.poker6, R.drawable.poker7, R.drawable.poker8, R.drawable.poker9, R.drawable.poker10, R.drawable.poker11,
+        final Integer[] pokerGroup = new Integer[]{
+                R.drawable.poker3, R.drawable.poker4, R.drawable.poker5, R.drawable.poker6, R.drawable.poker7, R.drawable.poker8, R.drawable.poker9, R.drawable.poker10, R.drawable.poker11,
                 R.drawable.poker12, R.drawable.poker13, R.drawable.poker14, R.drawable.poker15, R.drawable.poker16, R.drawable.poker17, R.drawable.poker18, R.drawable.poker19, R.drawable.poker20,
                 R.drawable.poker22, R.drawable.poker23, R.drawable.poker24, R.drawable.poker25, R.drawable.poker26, R.drawable.poker27, R.drawable.poker28, R.drawable.poker29, R.drawable.poker30,
                 R.drawable.poker31, R.drawable.poker32, R.drawable.poker32, R.drawable.poker33, R.drawable.poker34, R.drawable.poker35, R.drawable.poker36, R.drawable.poker37, R.drawable.poker38,
@@ -67,73 +66,69 @@ public class PokerGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int random = 0;
-                int randomId=0;
-                if(phoneType==1){      /*1080*1920类型手机*/
-                    x=75;
-                    if(gameGrade==2){
-                        x-=30;
-                    }else if(gameGrade==3){
-                        x=30;
-                    }else if(gameGrade==4){
-                        x=15;
+                int randomId = 0;
+                if (phoneType == 1) {      /*1080*1920类型手机*/
+                    x = 75;
+                    if (gameGrade == 2) {
+                        x -= 30;
+                    } else if (gameGrade == 3) {
+                        x = 30;
+                    } else if (gameGrade == 4) {
+                        x = 15;
                     }
-                }else if(phoneType==2){ /*1440*2560*/
-                    x=40;
-                    if(gameGrade==2){
-                        x-=20;
+                } else if (phoneType == 2) { /*1440*2560*/
+                    x = 40;
+                    if (gameGrade == 2) {
+                        x -= 20;
                     }
-                }else if(phoneType==3){
-                    x=20;
-                    if(gameGrade==2){
-                        x-=20;
+                } else if (phoneType == 3) {
+                    x = 20;
+                    if (gameGrade == 2) {
+                        x -= 20;
                     }
                 }
                 gameViewLayout.removeAllViews();
 
                 ConstraintSet constraintSet = new ConstraintSet();
-                List<Integer>idList = new ArrayList<>();
-                for (int i=0 ;i<pokerGame.getEachShowCardNum();i++) {
-                    random=(int)(Math.random()*(53-0))+0;//end结束的值，start开始的值
+                List<Integer> idList = new ArrayList<>();
+                for (int i = 0; i < pokerGame.getEachShowCardNum(); i++) {
+                    random = (int) (Math.random() * (53 - 0)) + 0;//end结束的值，start开始的值
                     randomId = View.generateViewId();
-                    if(idList.contains(randomId)){
+                    if (idList.contains(randomId)) {
                         continue;
-                    }else{
+                    } else {
                         idList.add(randomId);
                     }
 
 
                     ImageView imageView = new ImageView(PokerGameActivity.this);
-                    int pokerId = i==0?ConstraintSet.PARENT_ID:idList.get(i-1);
-                    Log.d(TAG, "pokerId positions"+pokerId);
+                    int pokerId = i == 0 ? ConstraintSet.PARENT_ID : idList.get(i - 1);
+                    Log.d(TAG, "pokerId positions" + pokerId);
                     imageView.setImageResource(pokerGroup[random]);
                     imageView.setId(randomId);
 
                     constraintSet.clone(gameViewLayout);
                     //右对右
-                    Log.d(TAG, "oldImageId = "+pokerId+"; newImageId = "+imageView.getId());
-                    constraintSet.constrainHeight(imageView.getId(),1600);
-                    constraintSet.connect(imageView.getId(),ConstraintSet.START,ConstraintSet.PARENT_ID,ConstraintSet.START, (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,x,getResources().getDisplayMetrics()));
-                    constraintSet.connect(imageView.getId(),ConstraintSet.TOP,ConstraintSet.PARENT_ID,ConstraintSet.TOP);
-                    constraintSet.connect(imageView.getId(),ConstraintSet.BOTTOM,ConstraintSet.PARENT_ID,ConstraintSet.BOTTOM);
+                    Log.d(TAG, "oldImageId = " + pokerId + "; newImageId = " + imageView.getId());
+                    constraintSet.constrainHeight(imageView.getId(), 1600);
+                    constraintSet.connect(imageView.getId(), ConstraintSet.START, ConstraintSet.PARENT_ID, ConstraintSet.START, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, x, getResources().getDisplayMetrics()));
+                    constraintSet.connect(imageView.getId(), ConstraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP);
+                    constraintSet.connect(imageView.getId(), ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM);
 
                     gameViewLayout.addView(imageView);
                     constraintSet.applyTo(gameViewLayout);
-                    if(gameGrade==1){
-                        x+=40;
-                    }else if(gameGrade==2){
-                        x+=30;
-                    }else if(gameGrade==3){
-                        x+=28;
-                    }else if(gameGrade==4){
-                        x+=20;
+                    if (gameGrade == 1) {
+                        x += 40;
+                    } else if (gameGrade == 2) {
+                        x += 30;
+                    } else if (gameGrade == 3) {
+                        x += 28;
+                    } else if (gameGrade == 4) {
+                        x += 20;
                     }
-
-
                 }
-
-
-                for (int i = 0 ;i<idList.size();i++) {
-                    Log.d(TAG, "["+i+"]Id:"+idList.get(i));
+                for (int i = 0; i < idList.size(); i++) {
+                    Log.d(TAG, "[" + i + "]Id:" + idList.get(i));
                 }
 
             }

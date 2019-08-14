@@ -6,71 +6,100 @@ import android.graphics.Point;
 import android.util.Log;
 import android.view.WindowManager;
 
+import com.jzy.braindevelopment.game.activity.FigureGameActivity;
 import com.jzy.braindevelopment.game.activity.PokerGameActivity;
 
 //游戏启动器
-public class GameInitiator{
+public class GameInitiator {
     private String gameName;
 
     private Integer gameGrade;  //1 2 3 4
-    private Integer phoneType;
+    private Integer phoneType; //手机类型
     private Activity activity;      //来自那个活动
-    public static final  String TAG = "Debug";
+    public static final String TAG = "Debug";
 
     public GameInitiator(String gameName, Integer gameGrade, Activity activity) {
         this.gameName = gameName;
         this.gameGrade = gameGrade;
         this.activity = activity;
         //得到手机分辨率
-        WindowManager wm = (WindowManager)activity.getSystemService(activity.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) activity.getSystemService(activity.WINDOW_SERVICE);
         Point point = new Point();
         wm.getDefaultDisplay().getSize(point);
         int width = point.x;
-        int height=point.y;
+        int height = point.y;
 
-        if(width==1080&&height>1620&&height<2220){      /*1080*1920类型手机*/
+        if (width == 1080 && height > 1620 && height < 2220) {      /*1080*1920类型手机*/
             setPhoneType(1);
-        }else if(width==1440&&height>2260&&height<2860){ /*1440*2560*/
+        } else if (width == 1440 && height > 2260 && height < 2860) { /*1440*2560*/
             setPhoneType(2);
-        }else if(width==720&&height>980&&height<1580){
+        } else if (width == 720 && height > 980 && height < 1580) {
             setPhoneType(3);
         }
-        Log.d(TAG, "屏幕宽度*高度:"+width+"*"+height+"手机类型："+this.phoneType);
+        Log.d(TAG, "屏幕宽度*高度:" + width + "*" + height + "手机类型：" + this.phoneType);
     }
 
-
-    //启动游戏Activity
-    public void startGame(){
+    //启动扑克牌游戏Activity
+    public void startGame() {
         Log.d(TAG, "startGame: ");
-        Log.d(TAG, "gameName:"+this.getGameName());
-        if(this.gameName.equals("poker")){
-        Intent intent = new Intent(activity,PokerGameActivity.class);
-        intent.putExtra("phoneType",this.phoneType);
+        Log.d(TAG, "gameName:" + this.getGameName());
+        if (this.gameName.equals("poker")) {
+            Intent intent = new Intent(activity, PokerGameActivity.class);
+            intent.putExtra("phoneType", this.phoneType);
 
-        PokerGame pokerGame = new PokerGame();
-        switch (gameGrade){     //难度：几秒记住几张
-            case 1:
-                pokerGame.setSecond(2);
-                pokerGame.setEachShowCardNum(5);
-                break;
-            case 2:
-                pokerGame.setSecond(2);
-                pokerGame.setEachShowCardNum(8);
-                break;
-            case 3:
-                pokerGame.setSecond(3);
-                pokerGame.setEachShowCardNum(10);
-                break;
-            case 4:
-                pokerGame.setSecond(5);
-                pokerGame.setEachShowCardNum(15);
-                break;
+            PokerGame pokerGame = new PokerGame();
+            switch (gameGrade) {     //难度：几秒记住几张
+                case 1:
+                    pokerGame.setSecond(2);
+                    pokerGame.setEachShowCardNum(5);
+                    break;
+                case 2:
+                    pokerGame.setSecond(2);
+                    pokerGame.setEachShowCardNum(8);
+                    break;
+                case 3:
+                    pokerGame.setSecond(3);
+                    pokerGame.setEachShowCardNum(10);
+                    break;
+                case 4:
+                    pokerGame.setSecond(5);
+                    pokerGame.setEachShowCardNum(15);
+                    break;
+            }
+//            intent.putExtra("initData", pokerGame);
+//            intent.putExtra("phoneType", getPhoneType().toString());
+//            intent.putExtra("gameGrade", getGameGrade().toString());
+//            activity.startActivity(intent);
         }
-        intent.putExtra("initData",pokerGame);
-        intent.putExtra("phoneType",getPhoneType().toString());
-            intent.putExtra("gameGrade",getGameGrade().toString());
-        activity.startActivity(intent);
-        }
+//        数字记忆
+        if (this.gameName.equals("figure")) {
+            Intent intent = new Intent(activity, FigureGameActivity.class);
+            intent.putExtra("phoneType", this.phoneType);
+
+            PokerGame pokerGame = new PokerGame();
+            switch (gameGrade) {     //难度：几秒记住几张
+                case 1:
+                    pokerGame.setSecond(2);
+                    pokerGame.setEachShowCardNum(5);
+                    break;
+                case 2:
+                    pokerGame.setSecond(2);
+                    pokerGame.setEachShowCardNum(8);
+                    break;
+                case 3:
+                    pokerGame.setSecond(3);
+                    pokerGame.setEachShowCardNum(10);
+                    break;
+                case 4:
+                    pokerGame.setSecond(5);
+                    pokerGame.setEachShowCardNum(15);
+                    break;
+            }
+            intent.putExtra("initData", pokerGame);
+            intent.putExtra("phoneType", getPhoneType().toString());
+            intent.putExtra("gameGrade", getGameGrade().toString());
+            activity.startActivity(intent);
+    }
     }
 
     public String getGameName() {
@@ -88,6 +117,7 @@ public class GameInitiator{
     public void setGameGrade(Integer gameGrade) {
         this.gameGrade = gameGrade;
     }
+
     public Integer getPhoneType() {
         return phoneType;
     }

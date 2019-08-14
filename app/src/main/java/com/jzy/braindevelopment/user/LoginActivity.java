@@ -1,14 +1,8 @@
 package com.jzy.braindevelopment.user;
 
-import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.res.ResourcesCompat;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -58,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
+//            用户名，密码验证
     private boolean UserExa(String user, String pwd) {
 
         boolean userExa = true;

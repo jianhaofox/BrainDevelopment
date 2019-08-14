@@ -42,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout constraintLayout = findViewById(R.id.poker_layout);
         constraintLayout.setClickable(true);
         constraintLayout.setOnTouchListener(new TouchAnimation());
-    }
+
+              /*数字记忆*/
+        ConstraintLayout figureLayout = findViewById(R.id.figure_layout);
+        figureLayout.setClickable(true);
+        figureLayout.setOnTouchListener(new TouchAnimation());
+}
     /*==== 单击动画 ====*/
     class TouchAnimation implements View.OnTouchListener{
         /*@Override

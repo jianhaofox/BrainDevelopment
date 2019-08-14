@@ -28,6 +28,7 @@ public class FigureGameActivity extends AppCompatActivity {
     private PokerGame pokerGame = null;
     private Integer phoneType = 1;     //手机类型
     private Integer gameGrade = null;  //难度
+    int i ;
     String Number = " ";
     /*存放数字数组*/
     Integer[] Figure;

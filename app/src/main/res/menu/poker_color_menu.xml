@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_plum"
+        android:title="梅花"
+        
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/item_square"
+        android:title="方块"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/item_peach"
+        android:title="黑桃"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/heart"
+        android:title="红心"
+        app:showAsAction="always">
+    </item>
+</menu>

@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".game.activity.FigureGameActivity"></activity>
         <activity android:name=".user.SignActivity" />
         <activity android:name=".user.LoginActivity" />
         <activity android:name=".Test" />

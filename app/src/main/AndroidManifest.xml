@@ -16,6 +16,7 @@
         <activity android:name=".user.LoginActivity" />
         <activity android:name=".Test" />
         <activity android:name=".game.activity.PokerGameActivity" />
+        <activity android:name=".game.activity.FigureGameActivity"></activity>
         <activity android:name=".game.activity.GradeActivity" />
         <activity
             android:name=".MainActivity"

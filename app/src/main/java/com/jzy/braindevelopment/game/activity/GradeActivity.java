@@ -19,8 +19,6 @@ public class GradeActivity extends AppCompatActivity {
     //游戏名字
     private String gameName;
 
-    int i;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +39,6 @@ public class GradeActivity extends AppCompatActivity {
 
             if(view instanceof Button){ //如果是按钮 绑定点击事件
                 view.setOnClickListener(new View.OnClickListener() {
-
                     @Override
                     public void onClick(View view) {
                         int grade = Integer.parseInt(view.getTag().toString());

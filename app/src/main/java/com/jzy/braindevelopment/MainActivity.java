@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
             if(event.getAction()== KeyEvent.ACTION_DOWN) {
                 Log.d(TAG, "ACTION_DOWN: ");
                 view.setBackgroundColor(Color.parseColor("#A69AA0"));
-
             }
             if(event.getAction()==KeyEvent.ACTION_UP){
                 Log.d(TAG, "ACTION_UP: ");

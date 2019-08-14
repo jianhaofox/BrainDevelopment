@@ -48,7 +48,7 @@ public class FigureGameActivity extends AppCompatActivity {
         /*获得显示数字控件*/
         TextView tv = (TextView) findViewById(R.id.wzi_text);
 
-
+        Log.d(TAG, "onCreate: 5245461354");
         /* 难度选择*/
         switch (gameGrade) {
             case 1:
@@ -79,7 +79,6 @@ public class FigureGameActivity extends AppCompatActivity {
                     } else {
                         Number = Number + "  " + Figure[i];
                     }
-
                 }
                 tv.setText(Number);
                 break;

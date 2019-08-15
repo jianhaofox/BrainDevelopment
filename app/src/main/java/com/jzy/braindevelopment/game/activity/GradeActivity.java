@@ -27,7 +27,7 @@ public class GradeActivity extends AppCompatActivity {
         //获得游戏
         Bundle bundle = getIntent().getExtras();
         gameName = bundle.getString("gameName");
-        Log.d(TAG, gameName+"321");
+        Log.d(TAG, gameName);
 
         //绑定游戏难度按钮点击事件
         ViewGroup viewGroup = findViewById(R.id.grade_layout);

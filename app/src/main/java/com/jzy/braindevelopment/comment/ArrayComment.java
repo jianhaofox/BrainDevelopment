@@ -12,7 +12,7 @@ public class ArrayComment {
 
         Integer ran[] = new Integer[ArratLength];
         for (int i = 0; i < ran.length; i++) {
-            int index = (int) (Math.random()*(max-min+1)+min);
+            int index = (int) (Math.random() * (max - min + 1) + min);
             ran[i] = index;
             Log.d("ArratLength", i + "-----FigureArray---" + ArratLength);
             System.out.println("***" + index);

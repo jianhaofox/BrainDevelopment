@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         InitActivity.initTitle(this, "登录");
 //        改变头部图片为注册
         ImageView title_img = (this.findViewById(R.id.head_pic));
+
         title_img.setBackgroundResource(R.mipmap.sign);
 
         final Button logo = findViewById(R.id.logoboot);

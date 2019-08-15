@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.user.CentreActivity;
 import com.jzy.braindevelopment.user.LoginActivity;
 import com.jzy.braindevelopment.user.SignActivity;
 
@@ -24,6 +25,7 @@ public class Test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+
         Button button = (Button)findViewById(R.id.btn_login);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,16 @@ public class Test extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Test.this, SignActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //        个人中心
+        Button Ge = (Button)findViewById(R.id.user_ger);
+        Ge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Test.this, CentreActivity.class);
                 startActivity(intent);
             }
         });

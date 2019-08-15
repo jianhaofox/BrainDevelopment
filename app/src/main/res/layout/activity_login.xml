@@ -48,7 +48,6 @@
                 android:layout_marginLeft="20dp"
                 android:text="账号"
                 android:textColor="#FFFFFF"
-
                 android:textSize="23dp" />
 
             <EditText

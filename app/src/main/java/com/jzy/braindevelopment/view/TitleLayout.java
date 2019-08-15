@@ -1,4 +1,4 @@
-package com.jzy.braindevelopment.comment;
+package com.jzy.braindevelopment.view;
 
 import android.app.Activity;
 import android.content.Context;

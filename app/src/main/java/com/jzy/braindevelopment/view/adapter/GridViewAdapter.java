@@ -1,6 +1,9 @@
 package com.jzy.braindevelopment.view.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.support.constraint.ConstraintLayout;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,9 +46,13 @@ public class GridViewAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         convertView = layoutInflater.inflate(R.layout.list_item, null);
         ImageView tvCode = (ImageView) convertView.findViewById(R.id.list_diary);
+        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams)tvCode.getLayoutParams();
+        params.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120, parent.getResources().getDisplayMetrics());
+        params.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, parent.getResources().getDisplayMetrics());
         Integer image = list.get(position);
         tvCode.setImageResource(image);
         tvCode.setId(image);
+        tvCode.setLayoutParams(params);
         return convertView;
     }
 }

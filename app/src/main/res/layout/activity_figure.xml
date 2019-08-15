@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".game.activity.FigureActivity">
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:id="@+id/titleLayout"
         android:layout_width="412dp"
         android:layout_height="103dp"

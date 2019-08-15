@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".game.activity.GradeActivity">
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/grade_title_bar"

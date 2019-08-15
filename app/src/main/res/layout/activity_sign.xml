@@ -27,7 +27,7 @@
     <!--验证码-->
 
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:id="@+id/titleLayout"
         android:layout_width="412dp"
         android:layout_height="103dp"

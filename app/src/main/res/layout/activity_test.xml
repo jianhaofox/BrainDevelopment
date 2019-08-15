@@ -5,37 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Test">
-
     <com.jzy.braindevelopment.comment.TitleLayout
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="登录"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_bar" />
-
+        app:layout_constraintTop_toBottomOf="@id/title_bar"
+        />
     <Button
         android:id="@+id/sign_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="用户注册"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login" />
-
-    <Button
-        android:id="@+id/user_ger"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="个人中心"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_user" />
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -43,9 +34,5 @@
         android:layout_height="35dp"
         android:text="time_text"
         tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="333dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_ger"
-        />
-
+        tools:layout_editor_absoluteY="333dp" />
 </android.support.constraint.ConstraintLayout>

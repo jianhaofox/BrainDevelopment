@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <!--引入头部-->
+    <com.jzy.braindevelopment.comment.TitleLayout
+        android:id="@+id/grade_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Center_Chen"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:src="@drawable/backgroud"
+        app:layout_constraintTop_toBottomOf="@+id/grade_title_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/Linaut_cen1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/Center_head"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_marginTop="130dp"
+            android:src="@mipmap/headpic"
+            app:layout_constraintTop_toTopOf="@+id/Center_Chen"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Name：何剑豪"
+            android:textColor=" #0A0A0A " />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="授权到期时间：2020/08/01"
+            android:textColor=" #0A0A0A " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bootm_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/Center_Chen">
+
+        <Button
+            android:id="@+id/btn_authorization"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:text="我的排名" />
+
+        <Button
+            android:layout_width="180dp"
+            android:textSize="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:text="课堂视频" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Center_authorization"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/bootm_center">
+
+        <Button
+            android:id="@+id/Centre_line"
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="在线授权" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/Center_updates">
+
+        <Button
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="退出账号" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/Center_authorization"
+        android:layout_height="match_parent"
+        android:id="@+id/Center_updates"
+        >
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="关于智慧机"/>
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:text="检查更新"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

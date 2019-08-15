@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".game.activity.PokerGameActivity">
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/poker_title_bar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!--计时器-->
-    <com.jzy.braindevelopment.utils.CircleTimerView
+    <com.jzy.braindevelopment.view.CircleTimerView
         android:layout_alignParentRight="true"
         android:id="@+id/circle_timer"
         android:layout_width="wrap_content"
@@ -73,11 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498"
-        tools:layout_editor_absoluteX="0dp">
-
-
-
-    </android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteX="0dp"/>
     <android.support.v7.widget.Toolbar
         android:id="@+id/poker_color_bar"
         android:layout_width="match_parent"
@@ -105,5 +101,10 @@
         </GridView>
     </LinearLayout>
 </HorizontalScrollView>
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </android.support.constraint.ConstraintLayout>

@@ -16,7 +16,9 @@ public class GameInitiator {
     private Integer gameGrade;  //1 2 3 4
     private Integer phoneType;
     private Activity activity;      //来自那个活动
+    public static int isOver=1;     //游戏是否结束 0 技术 1 未结束
     public static final String TAG = "Debug";
+
 
     public GameInitiator(String gameName, Integer gameGrade, Activity activity) {
         this.gameName = gameName;

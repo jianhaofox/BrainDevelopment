@@ -1,4 +1,4 @@
-package com.jzy.braindevelopment.utils;
+package com.jzy.braindevelopment.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -256,5 +256,6 @@ public class CircleTimerView extends View {
     public interface OnCountDownFinish{
         void onFinish();
     }
+
 
 }

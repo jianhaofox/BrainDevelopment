@@ -12,11 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".game.activity.ExamActivity"></activity>
         <activity android:name=".user.SignActivity" />
         <activity android:name=".user.LoginActivity" />
+        <activity android:name=".user.AuthorizationActivity" ></activity>
+        <activity android:name=".user.CentreActivity"> </activity>
         <activity android:name=".Test" />
         <activity android:name=".game.activity.PokerGameActivity" />
-        <activity android:name=".game.activity.FigureGameActivity"></activity>
+        <activity android:name=".game.activity.FigureGameActivity" />
         <activity android:name=".game.activity.GradeActivity" />
         <activity
             android:name=".MainActivity"

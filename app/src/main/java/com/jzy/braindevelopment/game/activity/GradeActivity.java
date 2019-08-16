@@ -6,9 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
-
 import com.jzy.braindevelopment.R;
 import com.jzy.braindevelopment.comment.InitActivity;
 import com.jzy.braindevelopment.game.GameInitiator;
@@ -21,8 +18,6 @@ public class GradeActivity extends AppCompatActivity {
     private GameInitiator gameInitiator;
     //游戏名字
     private String gameName;
-    //游戏规则
-    private String gameRule;
 
     private TextView gameRuleTxt;
     @Override

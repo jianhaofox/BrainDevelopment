@@ -44,6 +44,20 @@ public class Test extends AppCompatActivity {
         /*tvShow = (TextView) findViewById(R.id.textView);
         handler.postDelayed(runnable, TIME); //每隔1s执行*/
 
+
+        //        个人中心
+        Button Ge = (Button)findViewById(R.id.ger_but);
+        Ge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Test.this, CentreActivity.class);
+                startActivity(intent);
+            }
+        });
+        tvShow = (TextView) findViewById(R.id.textView);
+        handler.postDelayed(runnable, TIME); //每隔1s执行
+
+
     }
     //计时器
     Handler handler = new Handler();

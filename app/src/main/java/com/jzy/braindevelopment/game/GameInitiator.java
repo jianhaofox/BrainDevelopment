@@ -11,9 +11,11 @@ import com.jzy.braindevelopment.game.activity.PokerGameActivity;
 
 //游戏启动器
 public class GameInitiator {
-    private String gameName;
+
+  /*  private Integer gameGrade;  //1 2 3 4*/
 
     private Integer gameGrade;  //1 2 3 4
+    private String gameName;
     private Integer phoneType;
     private Activity activity;      //来自那个活动
     public static int isOver=1;     //游戏是否结束 0 技术 1 未结束
@@ -21,8 +23,8 @@ public class GameInitiator {
 
 
     public GameInitiator(String gameName, Integer gameGrade, Activity activity) {
-        this.gameName = gameName;
-        this.gameGrade = gameGrade;
+        this.gameGrade=gameGrade;
+        this.gameName=gameName;
         this.activity = activity;
         //得到手机分辨率
         WindowManager wm = (WindowManager) activity.getSystemService(activity.WINDOW_SERVICE);
@@ -53,19 +55,19 @@ public class GameInitiator {
             PokerGame pokerGame = new PokerGame();
             switch (gameGrade) {     //难度：几秒记住几张
                 case 1:
-                    pokerGame.setSecond(2);
-                    pokerGame.setEachShowCardNum(5);
+                    pokerGame.setSecond(3);
+                    pokerGame.setEachShowCardNum(4);
                     break;
                 case 2:
-                    pokerGame.setSecond(2);
+                    pokerGame.setSecond(5);
                     pokerGame.setEachShowCardNum(8);
                     break;
                 case 3:
-                    pokerGame.setSecond(3);
+                    pokerGame.setSecond(7);
                     pokerGame.setEachShowCardNum(10);
                     break;
                 case 4:
-                    pokerGame.setSecond(5);
+                    pokerGame.setSecond(8);
                     pokerGame.setEachShowCardNum(15);
                     break;
             }
@@ -73,9 +75,7 @@ public class GameInitiator {
             intent.putExtra("phoneType", getPhoneType().toString());
             intent.putExtra("gameGrade", getGameGrade().toString());
             activity.startActivity(intent);
-        }
-
-        if (this.gameName.equals("figure")) {
+        }else if (this.gameName.equals("figure")) {
             Intent intent = new Intent(activity, FigureGameActivity.class);
             intent.putExtra("phoneType", this.phoneType);
 
@@ -105,6 +105,16 @@ public class GameInitiator {
         }
 
     }
+    //获得游戏规则介绍
+    public static String getGameRule(String gameName){
+        if (gameName.equals("poker")) {
+            return new PokerGame().getGameRule();
+        }else if (gameName.equals("figure")){
+
+        }
+        return null;
+
+    }
 
     public String getGameName() {
         return gameName;
@@ -129,4 +139,5 @@ public class GameInitiator {
     public void setPhoneType(Integer phoneType) {
         this.phoneType = phoneType;
     }
+
 }

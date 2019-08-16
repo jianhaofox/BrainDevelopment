@@ -13,4 +13,5 @@ public class InitActivity {
     public static void initTitle(Activity activity, String title) {
         ((TextView) (activity.findViewById(R.id.bar_title))).setText(title);
     }
+
 }

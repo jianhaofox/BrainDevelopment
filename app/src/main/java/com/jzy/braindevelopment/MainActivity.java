@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.game.GameInitiator;
 import com.jzy.braindevelopment.game.activity.GradeActivity;
 import com.jzy.braindevelopment.main.GlideImageLoader;
 import com.youth.banner.Banner;
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, GradeActivity.class);
                 //传递参数 - 游戏名字
                 gameName = view.getTag().toString();
+                intent.putExtra("gameRule", GameInitiator.getGameRule(gameName));
                 intent.putExtra("gameName",gameName);
                 Log.d(TAG, view.getTag().toString());
                 startActivity(intent);

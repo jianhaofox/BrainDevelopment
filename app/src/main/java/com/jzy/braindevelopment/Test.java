@@ -41,13 +41,8 @@ public class Test extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        tvShow = (TextView) findViewById(R.id.textView);
-        handler.postDelayed(runnable, TIME); //每隔1s执行
-
-
-
-
-
+        /*tvShow = (TextView) findViewById(R.id.textView);
+        handler.postDelayed(runnable, TIME); //每隔1s执行*/
 
     }
     //计时器

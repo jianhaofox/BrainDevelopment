@@ -387,6 +387,7 @@ public class PokerGameActivity extends AppCompatActivity implements CircleTimerV
     private void initView() {
 
         mCircleTimerView = (CircleTimerView) findViewById(R.id.circle_timer);
+        Log.d(TAG, "second---"+pokerGame.getSecond());
         mCircleTimerView.setmTimeLength(pokerGame.getSecond());
         mCircleTimerView.setOnCountDownFinish(this);
         mCircleTimerView.start();

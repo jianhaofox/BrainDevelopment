@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
 import com.jzy.braindevelopment.R;
 import com.jzy.braindevelopment.comment.InitActivity;
 import com.jzy.braindevelopment.game.GameInitiator;
@@ -18,7 +21,10 @@ public class GradeActivity extends AppCompatActivity {
     private GameInitiator gameInitiator;
     //游戏名字
     private String gameName;
+    //游戏规则
+    private String gameRule;
 
+    private TextView gameRuleTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +34,22 @@ public class GradeActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         gameName = bundle.getString("gameName");
         Log.d(TAG, gameName+"321");
+        //显示游戏规则
+        gameRule = bundle.getString("gameRule");
+        gameRuleTxt = findViewById(R.id.gamerule_content_txt);
+        gameRuleTxt.setText(gameRule);
+        ImageButton ruleBtn = findViewById(R.id.question_btn_img);
+        ruleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(gameRuleTxt.getVisibility()==View.VISIBLE){
+                    gameRuleTxt.setVisibility(View.INVISIBLE);
+                }else{
+                    gameRuleTxt.setVisibility(View.VISIBLE);
+                }
 
+            }
+        });
         //绑定游戏难度按钮点击事件
         ViewGroup viewGroup = findViewById(R.id.grade_layout);
 

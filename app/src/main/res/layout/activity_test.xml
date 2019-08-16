@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test">
-    <com.jzy.braindevelopment.view.TitleLayout
-        android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="登录"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_bar"
-        />
-    <Button
-        android:id="@+id/sign_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="用户注册"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
-        />
+    android:padding="0dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:text="time_text"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="333dp" />
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Test">
+        <com.jzy.braindevelopment.view.TitleLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_bar"
+            />
+        <Button
+            android:id="@+id/sign_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户注册"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login"
+            />
+        <Button
+            android:id="@+id/btn_tst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:layout_marginTop="1200dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_user"
+            />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

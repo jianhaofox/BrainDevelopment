@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
 import com.jzy.braindevelopment.R;
 import com.jzy.braindevelopment.comment.InitActivity;
 import com.jzy.braindevelopment.game.GameInitiator;
@@ -30,7 +33,8 @@ public class GradeActivity extends AppCompatActivity {
         gameName = bundle.getString("gameName");
         Log.d(TAG, gameName+"321");
         //显示游戏规则
-        gameRule = bundle.getString("gameRule");
+
+        String gameRule = bundle.getString("gameRule");
         gameRuleTxt = findViewById(R.id.gamerule_content_txt);
         gameRuleTxt.setText(gameRule);
         ImageButton ruleBtn = findViewById(R.id.question_btn_img);

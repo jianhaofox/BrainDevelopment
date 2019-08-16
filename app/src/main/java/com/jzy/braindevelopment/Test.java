@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.jzy.braindevelopment.comment.InitActivity;
+import com.jzy.braindevelopment.user.CentreActivity;
 import com.jzy.braindevelopment.user.LoginActivity;
 import com.jzy.braindevelopment.user.SignActivity;
 
@@ -54,8 +55,7 @@ public class Test extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        tvShow = (TextView) findViewById(R.id.textView);
-        handler.postDelayed(runnable, TIME); //每隔1s执行
+
 
 
     }

@@ -42,7 +42,14 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sign_user"
             />
-
+        <Button
+            android:id="@+id/ger_but"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人中心"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_user"
+            />
 
 
     </android.support.constraint.ConstraintLayout>

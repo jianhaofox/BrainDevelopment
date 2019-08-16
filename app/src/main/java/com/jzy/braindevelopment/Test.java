@@ -45,7 +45,7 @@ public class Test extends AppCompatActivity {
         });
 
         //        个人中心
-        Button Ge = (Button)findViewById(R.id.user_ger);
+        Button Ge = (Button)findViewById(R.id.ger_but);
         Ge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,10 +55,6 @@ public class Test extends AppCompatActivity {
         });
         tvShow = (TextView) findViewById(R.id.textView);
         handler.postDelayed(runnable, TIME); //每隔1s执行
-
-
-
-
 
 
     }

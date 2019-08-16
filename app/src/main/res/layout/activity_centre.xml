@@ -6,12 +6,20 @@
     android:layout_height="wrap_content"
     android:background="#fff">
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:id="@+id/grade_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jzy.braindevelopment.view.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="412dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/Center_Chen"

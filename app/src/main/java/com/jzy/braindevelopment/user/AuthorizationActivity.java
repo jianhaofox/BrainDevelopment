@@ -20,9 +20,7 @@ public class AuthorizationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_authorization);
         //改变头部标题
         InitActivity.initTitle(this,"授权管理");
-        final Button button1=findViewById(R.id.userzc);
-        //单击按钮
-        button1.setOnTouchListener(new TouchAnimation());
+         Button button1=findViewById(R.id.userzc);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

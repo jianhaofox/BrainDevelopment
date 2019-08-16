@@ -9,7 +9,7 @@
     tools:context=".Test">
 
     <!--引入头部-->
-    <com.jzy.braindevelopment.comment.TitleLayout
+    <com.jzy.braindevelopment.view.TitleLayout
         android:id="@+id/poker_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

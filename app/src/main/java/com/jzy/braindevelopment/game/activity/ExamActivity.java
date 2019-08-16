@@ -1,21 +1,15 @@
 package com.jzy.braindevelopment.game.activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.jzy.braindevelopment.R;
 import com.jzy.braindevelopment.comment.InitActivity;
-import com.jzy.braindevelopment.user.LoginActivity;
 
-import java.util.ResourceBundle;
 
 public class ExamActivity extends AppCompatActivity {
     public static final String TAG = "Debug";
@@ -40,8 +34,6 @@ public class ExamActivity extends AppCompatActivity {
         Tji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(FigureGameActivity.this, ExamActivity.class);
-//                startActivity(intent);
                 EditText editText1 = findViewById(R.id.exame_txt);
                 String user = String.valueOf(editText1.getText().toString());
                 Log.d(TAG, "数字记忆结果: "+user);
